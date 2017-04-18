@@ -9,6 +9,11 @@ Feedstock license: BSD 3-Clause
 
 Summary: Automatic Forecasting Procedure
 
+Implements a procedure for forecasting time series data based on an
+additive model where non-linear trends are fit with yearly and weekly
+seasonality, plus holidays. It works best with daily periodicity data with
+at least one year of historical data. Prophet is robust to missing data,
+shifts in the trend, and large outliers.
 
 
 Current build status
@@ -16,7 +21,7 @@ Current build status
 
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/fbprophet-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/fbprophet-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/fbprophet-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/fbprophet-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/fbprophet-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/fbprophet-feedstock/branch/master)
 
 Current release info
 ====================
