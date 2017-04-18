@@ -1,8 +1,8 @@
 {%set name = "fbprophet" %}
-{%set version = "0.1.post1" %}
+{%set version = "0.1.1" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "b70808a1c58ec9883e07bf92deed51b44f572064057a35ee8409bca195ed41af" %}
+{%set hash_val = "5be931cf0f2c73eb221b269241bb15be0860497511026fd34a7e4da76395f20e" %}
 {%set build_num = "0" %}
 
 package:
@@ -15,36 +15,59 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  skip: True  # [win]
+  skip: True  # [win and py27]
   number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
-
+  features:
+    - vc14  # [win and py35]
+    - vc14  # [win and py36]
+  binary_has_prefix_files:
+    - Lib/site-packages/fbprophet/stan_models/linear_growth.pkl            # [win]
+    - Lib/site-packages/fbprophet/stan_models/logistic_growth.pkl          # [win]
+    - lib/python*/site-packages/fbprophet/stan_models/linear_growth.pkl    # [unix]
+    - lib/python*/site-packages/fbprophet/stan_models/logistic_growth.pkl  # [unix]
 
 requirements:
   build:
+    - toolchain  # [unix]
     - python
     - setuptools
-    - pystan >=2.8
+    - cython >=0.22
+    - pystan >=2.14
+    # Pystan models depend on numpy and as they are compiled and pickled we
+    # need to pin numpy version.
+    - numpy x.x
 
   run:
     - python
+    # setuptools is required for pkg_resources
+    - setuptools
     - cython >=0.22
-    - pystan >=2.8
+    - pystan >=2.14
+    - numpy x.x
+    - pandas >=0.18.1
     - matplotlib
-    - numpy
-    - pandas
 
 test:
-  imports:
-    - fbprophet
+  requires:
+    - pytest
+
+  commands:
+    - py.test -v --pyargs fbprophet
 
 about:
   home: https://facebookincubator.github.io/prophet/
   license: BSD 3-Clause
   license_family: BSD
-  # license_file: LICENSE - not in MANIFEST - see https://github.com/facebookincubator/prophet/pull/12
+  license_file: LICENSE
   summary: 'Automatic Forecasting Procedure'
-  doc_url: https://facebookincubator.github.io/prophet/
+  description: |
+    Implements a procedure for forecasting time series data based on an
+    additive model where non-linear trends are fit with yearly and weekly
+    seasonality, plus holidays. It works best with daily periodicity data with
+    at least one year of historical data. Prophet is robust to missing data,
+    shifts in the trend, and large outliers.
+  doc_url: https://facebookincubator.github.io/prophet/docs/quick_start.html
   dev_url: https://github.com/facebookincubator/prophet
 
 extra:
