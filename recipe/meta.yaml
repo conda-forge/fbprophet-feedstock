@@ -1,22 +1,22 @@
-{%set name = "fbprophet" %}
-{%set version = "0.1.1" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "5be931cf0f2c73eb221b269241bb15be0860497511026fd34a7e4da76395f20e" %}
-{%set build_num = "0" %}
+{% set name = "fbprophet" %}
+{% set version = "0.1.1" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_ = "5be931cf0f2c73eb221b269241bb15be0860497511026fd34a7e4da76395f20e" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  {{ hash_type }}: {{ hash }}
 
 build:
   skip: True  # [win and py27]
-  number: {{ build_num }}
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
   features:
     - vc14  # [win and py35]
