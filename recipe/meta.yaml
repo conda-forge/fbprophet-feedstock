@@ -35,13 +35,14 @@ requirements:
     - pystan >=2.14
     # Pystan models depend on numpy and as they are compiled and pickled we
     # need to pin numpy version.
-    - numpy 1.10.*    
+    - numpy 1.10.*
 
   run:
     - python
     - matplotlib
     - pandas >=0.18.1
     - pystan >=2.14
+    - numpy >=1.10
     # setuptools is required for pkg_resources
     - setuptools
     
