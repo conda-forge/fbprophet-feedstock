@@ -18,9 +18,8 @@ build:
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
   features:
-    - vc 9  # [win and py27]
-    - vc10  # [win and py35]
-    - vc14  # [win and py36]
+    - vc9   # [win and py27]
+    - vc14  # [win and py>=35]
   binary_has_prefix_files:
     - Lib/site-packages/fbprophet/stan_models/linear_growth.pkl            # [win]
     - Lib/site-packages/fbprophet/stan_models/logistic_growth.pkl          # [win]
