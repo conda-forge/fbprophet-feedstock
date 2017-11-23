@@ -1,8 +1,8 @@
 {% set name = "fbprophet" %}
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "da247d103e5c5aec8ea46ee5a3a56855c9e7c87ba744511e40ec859ac914d463" %}
+{% set hash = "161ee0056b7073a59a052eefe0eb986a8f5ec78090578d5ca01cb78009dcc30e" %}
 {% set build = 0 %}
 
 package:
@@ -56,7 +56,7 @@ test:
     - py.test -v --pyargs fbprophet
 
 about:
-  home: https://facebookincubator.github.io/prophet/
+  home: https://facebook.github.io/prophet/
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
@@ -67,8 +67,8 @@ about:
     seasonality, plus holidays. It works best with daily periodicity data with
     at least one year of historical data. Prophet is robust to missing data,
     shifts in the trend, and large outliers.
-  doc_url: https://facebookincubator.github.io/prophet/docs/quick_start.html
-  dev_url: https://github.com/facebookincubator/prophet
+  doc_url: https://facebook.github.io/prophet/docs/quick_start.html
+  dev_url: https://github.com/facebook/prophet
 
 extra:
   recipe-maintainers:
