@@ -1,7 +1,7 @@
 About fbprophet
 ===============
 
-Home: https://facebookincubator.github.io/prophet/
+Home: https://facebook.github.io/prophet/
 
 Package license: BSD 3-Clause
 
@@ -19,14 +19,16 @@ shifts in the trend, and large outliers.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/fbprophet-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/fbprophet-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/fbprophet-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/fbprophet-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/fbprophet-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/fbprophet-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/fbprophet-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/fbprophet-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/fbprophet-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/fbprophet-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/fbprophet-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/fbprophet-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fbprophet/badges/version.svg)](https://anaconda.org/conda-forge/fbprophet)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fbprophet/badges/downloads.svg)](https://anaconda.org/conda-forge/fbprophet)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-fbprophet-green.svg)](https://anaconda.org/conda-forge/fbprophet) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/fbprophet.svg)](https://anaconda.org/conda-forge/fbprophet) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/fbprophet.svg)](https://anaconda.org/conda-forge/fbprophet) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/fbprophet.svg)](https://anaconda.org/conda-forge/fbprophet) |
 
 Installing fbprophet
 ====================
