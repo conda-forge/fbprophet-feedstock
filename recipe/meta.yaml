@@ -41,7 +41,7 @@ requirements:
   run:
     - python
     - matplotlib
-    - pandas >=0.18.1
+    - pandas >=0.20.1
     - pystan >=2.14
     - numpy >=1.10  # [not win or py<=35]
     - numpy >=1.11  # [win and py>=36]
