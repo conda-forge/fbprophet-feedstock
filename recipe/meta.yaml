@@ -1,8 +1,8 @@
 {% set name = "fbprophet" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.post1 " %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "161ee0056b7073a59a052eefe0eb986a8f5ec78090578d5ca01cb78009dcc30e" %}
+{% set hash = "835473d200da6409495fca090de5d12024401936747d46f45abba33c30f7beb3" %}
 {% set build = 0 %}
 
 package:
@@ -41,7 +41,7 @@ requirements:
   run:
     - python
     - matplotlib
-    - pandas >=0.18.1
+    - pandas >=0.20.1
     - pystan >=2.14
     - numpy >=1.10  # [not win or py<=35]
     - numpy >=1.11  # [win and py>=36]
