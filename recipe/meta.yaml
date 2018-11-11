@@ -35,17 +35,13 @@ requirements:
     - pystan >=2.14
     # Pystan models depend on numpy and as they are compiled and pickled we
     # need to pin numpy version. Note that 1.10 is not available for win+py36.
-    - numpy 1.10.*  # [not win or py<=35]
-    - numpy 1.11.*  # [win and py>=36]
-
+    - numpy
   run:
     - python
     - matplotlib >=2.0.0
     - pandas >=0.20.1
     - pystan >=2.14
-    - numpy >=1.10  # [not win or py<=35]
-    - numpy >=1.11  # [win and py>=36]
-    # setuptools is required for pkg_resources
+    - {{ pin_compatible('numpy') }}
     - setuptools
     
 test:
