@@ -16,7 +16,7 @@ source:
 
 build:
   number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . -vv"
   features:
     - vc9   # [win and py27]
     - vc14  # [win and py>=35]
@@ -26,7 +26,7 @@ build:
 
 requirements:
   build:
-    - toolchain  # [unix]
+    - {{ compiler('cxx') }}
     - python
     - setuptools
     - cython >=0.22
