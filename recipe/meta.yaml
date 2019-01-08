@@ -41,9 +41,9 @@ requirements:
     - matplotlib >=2.0.0
     - pandas >=0.20.1
     - pystan >=2.14
-    - lunardate>=0.1.5
-    - convertdate>=2.1.2
-    - holidays>=0.9.5
+    - lunardate >=0.1.5
+    - convertdate >=2.1.2
+    - holidays >=0.9.5
     - numpy >=1.10  # [not win or py<=35]
     - numpy >=1.11  # [win and py>=36]
     # setuptools is required for pkg_resources
