@@ -16,7 +16,7 @@ source:
 
 build:
   number: {{ build }}
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   features:
     - vc9   # [win and py27]
     - vc14  # [win and py>=35]
