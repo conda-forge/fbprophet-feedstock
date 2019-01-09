@@ -26,6 +26,7 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - python
@@ -37,8 +38,10 @@ requirements:
     # need to pin numpy version. Note that 1.10 is not available for win+py36.
     - numpy 1.10.*  # [not win or py<=35]
     - numpy 1.11.*  # [win and py>=36]
-
   run:
+    - m2w64-toolchain        # [win]
+    - {{ compiler('c') }}    # [not win]
+    - {{ compiler('cxx') }}  # [not win]
     - python
     - matplotlib >=2.0.0
     - pandas >=0.20.1
