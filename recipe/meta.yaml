@@ -27,6 +27,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+  host:
     - python
     - setuptools
     - cython >=0.22
