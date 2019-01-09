@@ -29,6 +29,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - pip
     - setuptools
     - cython >=0.22
     - pystan >=2.14
