@@ -34,8 +34,7 @@ requirements:
     - pystan >=2.14
     # Pystan models depend on numpy and as they are compiled and pickled we
     # need to pin numpy version. Note that 1.10 is not available for win+py36.
-    - numpy 1.10.*  # [not win or py<=35]
-    - numpy 1.11.*  # [win and py>=36]
+    - numpy 1.11.*
   run:
     - m2w64-toolchain        # [win]
     - {{ compiler('c') }}    # [not win]
@@ -47,11 +46,10 @@ requirements:
     - lunardate >=0.1.5
     - convertdate >=2.1.2
     - holidays >=0.9.5
-    - numpy >=1.10  # [not win or py<=35]
-    - numpy >=1.11  # [win and py>=36]
+    - numpy >=1.11
     # setuptools is required for pkg_resources
     - setuptools
-    
+
 test:
   requires:
     - pytest
