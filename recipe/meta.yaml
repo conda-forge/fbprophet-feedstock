@@ -1,8 +1,8 @@
 {% set name = "fbprophet" %}
-{% set version = "0.4.post1" %}
+{% set version = "0.4.post2" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "dfc1eb2836dc609dc0075822d969e8d908b0e42219b44cfe40c544de7cb0561b" %}
+{% set hash = "3576e5e40e3db4e2c71fa8a1e20dd55d449012844ac6a84e939a1cb1b9668e30" %}
 {% set build = 0 %}
 
 package:
@@ -79,3 +79,4 @@ extra:
   recipe-maintainers:
     - pmlandwehr
     - rmax
+    - bletham
