@@ -29,12 +29,8 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
     - cython >=0.22
-    - pystan >=2.14
-    # Pystan models depend on numpy and as they are compiled and pickled we
-    # need to pin numpy version. Note that 1.10 is not available for win+py36.
-    - numpy 1.11.*
+    - numpy
   run:
     - m2w64-toolchain        # [win]
     - {{ compiler('c') }}    # [not win]
@@ -59,7 +55,7 @@ test:
 
 about:
   home: https://facebook.github.io/prophet/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Automatic Forecasting Procedure'
