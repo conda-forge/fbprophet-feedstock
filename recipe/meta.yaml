@@ -1,9 +1,9 @@
 {% set name = "fbprophet" %}
-{% set version = "0.5" %}
+{% set version = "0.6" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "c67fde2845db52dbdb4becd312b271575ce1c804be666ed1eee94339c5a35127" %}
-{% set build = 3 %}
+{% set hash = "de7eaa16500e4dba69a0706906775cbe96668a6fe48354ee2fff820d9e6a899b" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -31,7 +31,12 @@ requirements:
     - pip
     - setuptools
     - cython >=0.22
+    - pandas >=0.20.1
     - pystan >=2.14
+    - LunarCalendar >=0.0.9
+    - convertdate >=2.1.2
+    - holidays >=0.9.5
+    - python-dateutil >=2.8.0
     # Pystan models depend on numpy and as they are compiled and pickled we
     # need to pin numpy version. Note that 1.10 is not available for win+py36.
     - numpy 1.11.*
@@ -41,11 +46,12 @@ requirements:
     - {{ compiler('cxx') }}  # [not win]
     - python
     - matplotlib-base >=2.0.0
-    - pandas >=0.20.1,<1.0.0
+    - pandas >=0.20.1
     - pystan >=2.14
-    - lunardate >=0.1.5
+    - LunarCalendar >=0.0.9
     - convertdate >=2.1.2
-    - holidays >=0.9.5,<0.10.1
+    - holidays >=0.9.5
+    - python-dateutil >=2.8.0
     - numpy >=1.11
     # setuptools is required for pkg_resources
     - setuptools
@@ -59,8 +65,8 @@ test:
 
 about:
   home: https://facebook.github.io/prophet/
-  license: BSD 3-Clause
-  license_family: BSD
+  license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: 'Automatic Forecasting Procedure'
   description: |
