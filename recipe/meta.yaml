@@ -27,7 +27,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python >=3
+    - python
     - pip
     - setuptools
     - cython >=0.22
@@ -44,7 +44,7 @@ requirements:
     - m2w64-toolchain        # [win]
     - {{ compiler('c') }}    # [not win]
     - {{ compiler('cxx') }}  # [not win]
-    - python >=3
+    - python
     - matplotlib-base >=2.0.0
     - pandas >=0.20.1
     - pystan >=2.14
