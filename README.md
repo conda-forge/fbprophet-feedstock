@@ -3,7 +3,7 @@ About fbprophet
 
 Home: https://facebook.github.io/prophet/
 
-Package license: BSD 3-Clause
+Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
