@@ -1,7 +1,6 @@
 {% set name = "fbprophet" %}
 {% set version = "0.6" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash = "de7eaa16500e4dba69a0706906775cbe96668a6fe48354ee2fff820d9e6a899b" %}
 {% set build = 0 %}
 
@@ -12,7 +11,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   number: {{ build }}
