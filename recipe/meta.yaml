@@ -29,16 +29,16 @@ requirements:
     - python
     - pip
     - setuptools
-    - cython >=0.22
-    - pandas >=0.20.1
-    - pystan >=2.14
-    - LunarCalendar >=0.0.9
-    - convertdate >=2.1.2
-    - holidays >=0.9.5
-    - python-dateutil >=2.8.0
+    - cython
+    - pandas
+    - pystan
+    - LunarCalendar
+    - convertdate
+    - holidays
+    - python-dateutil
     # Pystan models depend on numpy and as they are compiled and pickled we
     # need to pin numpy version. Note that 1.10 is not available for win+py36.
-    - numpy 1.11.*
+    - numpy 1.14.*
   run:
     - m2w64-toolchain        # [win]
     - {{ compiler('c') }}    # [not win]
@@ -51,7 +51,7 @@ requirements:
     - convertdate >=2.1.2
     - holidays >=0.9.5
     - python-dateutil >=2.8.0
-    - numpy >=1.11
+    - numpy >=1.14
     # setuptools is required for pkg_resources
     - setuptools
 
