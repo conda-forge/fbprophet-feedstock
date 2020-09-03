@@ -1,8 +1,7 @@
 {% set name = "fbprophet" %}
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "de7eaa16500e4dba69a0706906775cbe96668a6fe48354ee2fff820d9e6a899b" %}
+{% set hash = "490800ffbff6649bedb8ea0760b73cdc932eaf0e74d8fac508dc511125bb2505" %}
 {% set build = 0 %}
 
 package:
@@ -12,12 +11,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   number: {{ build }}
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [py2k]
+  skip: true  # [py2k]
   binary_has_prefix_files:
     - Lib/site-packages/fbprophet/stan_model/prophet_model.pkl          # [win]
     - lib/python*/site-packages/fbprophet/stan_model/prophet_model.pkl  # [unix]
@@ -37,6 +36,7 @@ requirements:
     - convertdate >=2.1.2
     - holidays >=0.9.5
     - python-dateutil >=2.8.0
+    - tqdm >=4.36.1
     # Pystan models depend on numpy and as they are compiled and pickled we
     # need to pin numpy version. Note that 1.10 is not available for win+py36.
     - numpy 1.11.*
@@ -52,6 +52,7 @@ requirements:
     - convertdate >=2.1.2
     - holidays >=0.9.5
     - python-dateutil >=2.8.0
+    - tqdm >=4.36.1
     - numpy >=1.11
     # setuptools is required for pkg_resources
     - setuptools
@@ -68,7 +69,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Automatic Forecasting Procedure'
+  summary: Automatic Forecasting Procedure
   description: |
     Implements a procedure for forecasting time series data based on an
     additive model where non-linear trends are fit with yearly, weekly, and
