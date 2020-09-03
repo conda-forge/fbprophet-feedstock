@@ -37,7 +37,7 @@ requirements:
     - holidays >=0.9.5
     - python-dateutil >=2.8.0
     - tqdm >=4.36.1
-    - numpy >=1.11
+    - numpy >=1.18
   run:
     - m2w64-toolchain        # [win]
     - {{ compiler('c') }}    # [not win]
@@ -51,7 +51,7 @@ requirements:
     - holidays >=0.9.5
     - python-dateutil >=2.8.0
     - tqdm >=4.36.1
-    - numpy >=1.11
+    - numpy >=1.18
     # setuptools is required for pkg_resources
     - setuptools
 
