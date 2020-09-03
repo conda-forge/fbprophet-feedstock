@@ -62,8 +62,7 @@ test:
     - pytest
 
   commands:
-    - py.test -v --pyargs fbprophet  # [not win]
-    - python -c "import fbprophet"  # [win]
+    - py.test -v --pyargs fbprophet
 
 about:
   home: https://facebook.github.io/prophet/
