@@ -37,9 +37,7 @@ requirements:
     - holidays >=0.9.5
     - python-dateutil >=2.8.0
     - tqdm >=4.36.1
-    # Pystan models depend on numpy and as they are compiled and pickled we
-    # need to pin numpy version. Note that 1.10 is not available for win+py36.
-    - numpy 1.11.*
+    - numpy >=1.11
   run:
     - m2w64-toolchain        # [win]
     - {{ compiler('c') }}    # [not win]
