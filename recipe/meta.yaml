@@ -1,8 +1,7 @@
 {% set name = "fbprophet" %}
-{% set version = "0.6" %}
+{% set version = "0.7.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "de7eaa16500e4dba69a0706906775cbe96668a6fe48354ee2fff820d9e6a899b" %}
+{% set hash = "3ac63a05caf5117d9c6ed83fa6f9d4ffc207b60a56854c905f2789d8a89c2b6f" %}
 {% set build = 0 %}
 
 package:
@@ -12,12 +11,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   number: {{ build }}
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [py2k]
+  skip: true  # [py2k]
   binary_has_prefix_files:
     - Lib/site-packages/fbprophet/stan_model/prophet_model.pkl          # [win]
     - lib/python*/site-packages/fbprophet/stan_model/prophet_model.pkl  # [unix]
@@ -68,7 +67,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Automatic Forecasting Procedure'
+  summary: Automatic Forecasting Procedure
   description: |
     Implements a procedure for forecasting time series data based on an
     additive model where non-linear trends are fit with yearly, weekly, and
