@@ -31,7 +31,7 @@ requirements:
     - setuptools
     - cython >=0.22
     - pandas >=1.0.4
-    - pystan >=2.18.1
+    - pystan >=2.14
     - LunarCalendar >=0.0.9
     - convertdate >=2.1.2
     - holidays >=0.10.3
@@ -47,7 +47,7 @@ requirements:
     - python
     - matplotlib-base >=2.0.0
     - pandas >=1.0.4
-    - pystan >=2.18.1
+    - pystan >=2.14
     - LunarCalendar >=0.0.9
     - convertdate >=2.1.2
     - holidays >=0.10.3
