@@ -30,13 +30,13 @@ requirements:
     - pip
     - setuptools
     - cython >=0.22
-    - pandas >=0.20.1
+    - pandas >=1.0.4
     - pystan >=2.14
     - LunarCalendar >=0.0.9
     - convertdate >=2.1.2
-    - holidays >=0.9.5
+    - holidays >=0.10.2
     - python-dateutil >=2.8.0
-    - tqdm
+    - tqdm >=4.36.1
     - numpy >=1.15.4
   run:
     - m2w64-toolchain        # [win]
@@ -44,13 +44,13 @@ requirements:
     - {{ compiler('cxx') }}  # [not win]
     - python
     - matplotlib-base >=2.0.0
-    - pandas >=0.20.1
+    - pandas >=1.0.4
     - pystan >=2.14
     - LunarCalendar >=0.0.9
     - convertdate >=2.1.2
-    - holidays >=0.9.5
+    - holidays >=0.10.2
     - python-dateutil >=2.8.0
-    - tqdm
+    - tqdm >=4.36.1
     - numpy >=1.15.4
     # setuptools is required for pkg_resources
     - setuptools
