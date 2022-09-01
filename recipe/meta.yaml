@@ -29,7 +29,6 @@ requirements:
     - python
     - pip
     - cython >=0.22
-    - pystan >=2.14
   run:
     - m2w64-toolchain        # [win]
     - {{ compiler('c') }}    # [not win]
