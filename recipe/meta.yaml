@@ -58,8 +58,10 @@ requirements:
 test:
   requires:
     - pytest
+    - pip
 
   commands:
+    - pip check
     - py.test -v --pyargs fbprophet
 
 about:
@@ -80,6 +82,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - pmlandwehr
     - rmax
     - bletham
